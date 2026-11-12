@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Cấu hình dự án .NET 8 Console App -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>AirQualityDW</RootNamespace>
+    <AssemblyName>AirQualityDW</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Thư viện kết nối MySQL -->
+    <PackageReference Include="MySqlConnector" Version="2.3.*" />
+    <!-- Thư viện đọc file CSV -->
+    <PackageReference Include="CsvHelper" Version="31.*" />
+    <!-- Thư viện xuất Excel (không yêu cầu giấy phép) -->
+    <PackageReference Include="ClosedXML" Version="0.102.*" />
+    <!-- Thư viện cấu hình ứng dụng -->
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Sao chép file cấu hình vào thư mục output khi build -->
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.example.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

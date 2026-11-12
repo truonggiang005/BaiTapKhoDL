@@ -1,0 +1,30 @@
+# Kho Dữ Liệu Chất Lượng Không Khí Việt Nam
+
+## Các file cần bỏ qua
+
+# Cấu hình chứa mật khẩu
+src/appsettings.json
+
+# Thư mục build .NET
+bin/
+obj/
+src/bin/
+src/obj/
+
+# Thư mục Java cũ (không dùng)
+.idea/
+.mvn/
+target/
+src/main/
+src/test/
+pom.xml
+
+# Output
+output/*.xlsx
+
+# Log
+logs/*.log
+
+# OS files
+Thumbs.db
+.DS_Store
